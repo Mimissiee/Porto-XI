@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+nav:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* lebih gelap saat hover */
+}
+
+nav h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgba(245, 239, 239, 0.6);
+}
+
+/* Background */
+.bg {
+  background-image: url("image/asasa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 150px;
+  color: white;
+}
+
+/* Text Section */
+.profile-text {
+  text-align: left;
+}
+
+.profile-text h2 {
+  font-size: 64px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
+
+.profile-text p {
+  font-size: 24px;
+  color: #ccc;
+  margin-left: 150px;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.profile-button {
+  margin-left: 150px;
+  padding: 14px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #999999, #666666);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.profile-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #666666, #999999);
+  box-shadow: 0 6px 20px rgba(102, 102, 102, 0.6);
+}
+
+/* Profile Image */
+.profile-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+/* Projects Section */
+.projects-section {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  padding: 100px 150px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #f1f1f1;
+}
+
+/* Project Card */
+.project-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #2b2b2b;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6);
+}
+
+.project-card h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  color: #ccc; /* abu-abu terang */
+}
+
+.project-card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  margin-bottom: 28px;
+}
+
+/* Tombol */
+.project-button {
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #666666, #999999);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4);
+}
+
+.project-button:hover {
+  background: linear-gradient(135deg, #999999, #666666);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(102, 102, 102, 0.6);
+}
+
+
+
