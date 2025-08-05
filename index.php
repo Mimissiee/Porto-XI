@@ -15,7 +15,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="loginpage.html">Login!</a></li>
+        <li><a href="loginpage.php">Login!</a></li>
       </ul>
     </nav>
   </header>
@@ -42,14 +42,14 @@
   <div class="projects-grid">
 
     <div class="project-card">
-      <img src="/image/image.png" alt="Project 1">
+      <img src="image/image.png" alt="Project 1">
       <h3>Website Portofolio</h3>
       <p>Website portofolio responsif yang menampilkan karya dan keterampilan saya sebagai Web Developer & UI/UX Designer. Dibuat dengan HTML, CSS, dan animasi scroll.</p>
       <a href="#" class="project-button">Lihat Proyek</a>
     </div>
 
     <div class="project-card">
-      <img src="/image/image.png" alt="Project 2">
+      <img src="image/image.png" alt="Project 2">
       <h3>Website Portofolio</h3>
       <p>Website portofolio responsif yang menampilkan karya dan keterampilan saya sebagai Web Developer & UI/UX Designer. Dibuat dengan HTML, CSS, dan animasi scroll.</p>
       <a href="#" class="project-button">Lihat Proyek</a>
