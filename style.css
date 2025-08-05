@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,10 +17,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed; /* agar ikut scroll */
+  background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
-  /* display: flex; */
   align-items: center;  
 }
 
@@ -45,7 +45,7 @@ nav {
 }
 
 nav:hover {
-  background-color: rgba(0, 0, 0, 0.6); /* lebih gelap saat hover */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav h1 {
@@ -67,7 +67,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgba(245, 239, 239, 0.6);
+  color: #c0c0c0;
 }
 
 /* Background */
@@ -76,15 +76,12 @@ nav ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed; /* agar ikut scroll */
+  background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
 }
-
-
-
 
 /* Profile Container */
 .profile-container {
@@ -121,19 +118,19 @@ nav ul li a:hover {
   font-size: 18px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #999999, #666666);
+  background: linear-gradient(135deg, #444, #222);
   color: white;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   text-decoration: none;
   display: inline-block;
 }
 
 .profile-button:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #666666, #999999);
-  box-shadow: 0 6px 20px rgba(102, 102, 102, 0.6);
+  background: linear-gradient(135deg, #222, #444);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Profile Image */
@@ -147,7 +144,6 @@ nav ul li a:hover {
 
 /* Projects Section */
 .projects-section {
-  /* background-color: #1e1e1e; */
   color: #f1f1f1;
   padding: 100px 150px;
   text-align: center;
@@ -179,7 +175,7 @@ nav ul li a:hover {
 .project-card h3 {
   font-size: 30px;
   margin-bottom: 16px;
-  color: #ccc; /* abu-abu terang */
+  color: #ccc;
 }
 
 .project-card p {
@@ -204,29 +200,26 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-
-/* Tombol */
 .project-button {
   padding: 12px 28px;
   font-size: 16px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #666666, #999999);
+  background: linear-gradient(135deg, #444, #222);
   color: #fff;
   text-decoration: none;
   border: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .project-button:hover {
-  background: linear-gradient(135deg, #999999, #666666);
+  background: linear-gradient(135deg, #222, #444);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(102, 102, 102, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
 }
 
 /* Contact Section */
 .contact-section {
-  /* background-color: #1e1e1e; */
   color: #f1f1f1;
   padding: 100px 150px;
   text-align: center;
@@ -244,7 +237,6 @@ nav ul li a:hover {
   margin-bottom: 40px;
 }
 
-/* Form */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -270,7 +262,7 @@ nav ul li a:hover {
 }
 
 .contact-form button {
-  background: linear-gradient(135deg, #666666, #999999);
+  background: linear-gradient(135deg, #444, #222);
   color: #fff;
   border: none;
   padding: 14px 24px;
@@ -278,19 +270,16 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: 16px;
   transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .contact-form button:hover {
-  background: linear-gradient(135deg, #999999, #666666);
-  box-shadow: 0 6px 20px rgba(102, 102, 102, 0.6);
+  background: linear-gradient(135deg, #222, #444);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
 }
 
-/* end */
-
 .about-section {
-  /* background-color: #1e1e1e; */
   color: #f1f1f1;
   padding: 100px 150px;
   text-align: center;
@@ -314,7 +303,6 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-/* footer */
 .footer {
   background-color: rgba(0, 0, 0, 0.4);
   color: #aaa;
@@ -324,8 +312,76 @@ nav ul li a:hover {
   border-top: 1px solid #333;
 }
 
+/* login */
 
+.login-container {
+      max-width: 400px;
+      margin: 120px auto;
+      background-color: rgba(43, 43, 43, 0.9);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      position: relative;
+    }
 
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 28px;
+      color: #fff;
+    }
 
+    .login-container input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border: 1px solid #444;
+      border-radius: 10px;
+      background-color: #2b2b2b;
+      color: #f1f1f1;
+      font-size: 16px;
+    }
 
+    .login-container input::placeholder {
+      color: #888;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #444, #222);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: linear-gradient(135deg, #222, #444);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Arrow */
+
+ .card-back-arrow {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 22px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.card-back-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
 
