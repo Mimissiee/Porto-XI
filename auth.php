@@ -1,5 +1,5 @@
 <?php
-session_start(); // ← PERBAIKI dari session_star()
+session_start();
 
 // Data Dummy pengguna
 $dummy_users = [
@@ -16,11 +16,11 @@ $password = $_POST['password'] ?? '';
 if (isset($dummy_users[$username]) && $dummy_users[$username] === $password) {
     // Login sukses
     $_SESSION['user'] = $username;
-    header("Location: welcome.php"); // ← PERBAIKI dari header(header: ...)
+    header("Location: welcome.php"); 
     exit;
 } else {
     // Login gagal
-    header("Location: loginpage.php?error=1"); // ← PERBAIKI juga
-    exit;
+    header("Location: loginpage.php?error=1");  
+   exit;
 }
 ?>
