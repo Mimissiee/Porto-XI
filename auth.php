@@ -3,7 +3,7 @@ session_start();
 
 // Data Dummy pengguna
 $dummy_users = [
-    'guru' => 'password123',
+    'guru' => 'guru123',
     'siswa' => 'siswa123',
     'admin' => 'admin'
 ];

@@ -19,6 +19,10 @@ if (isset($_SESSION['user'])) {
   <a href="javascript:history.back()" class="card-back-arrow" title="Back">&#60;</a>
   <h2>Login</h2>
 
+   <?php if (isset($_GET['error'])): ?>
+    <p style="color: red;">Username atau password salah!</p>
+  <?php endif; ?>
+
   <form action="auth.php" method="post">
     <div class="form-group">
       <label for="username">Username:</label>
