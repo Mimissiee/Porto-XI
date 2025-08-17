@@ -5,6 +5,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
+// Definisikan variabel $page dulu supaya tidak Undefined
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 ?>
 <!DOCTYPE html>
@@ -62,7 +63,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 <!-- Isi Halaman -->
 <div class="content">
 <?php
-switch ($page) {
+switch ($page ?? 'home') {
     case 'home':
         echo "<h1>Halaman Home</h1>";
         echo "<p>Selamat datang, " . $_SESSION['user'] . "! Ini adalah halaman home dashboard.</p>";
@@ -84,8 +85,7 @@ switch ($page) {
         echo "<p>Ini tampilan halaman pengaturan.</p>";
         break;
     case 'laporan':
-        echo "<h1>Halaman Laporan</h1>";
-        echo "<p>Ini tampilan halaman laporan.</p>";
+        include "laporan.php"; //
         break;
     default:
         echo "<h1>404 - Halaman tidak ditemukan</h1>";
