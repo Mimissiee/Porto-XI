@@ -12,15 +12,24 @@ function query($query) {
 }
 
 function upload() {
-    if (!isset($_FILES['gambar']) || $_FILES['gambar']['error'] === 4) {
-        return 'default.png'; // kalau tidak ada gambar diupload
+    // cek apakah tidak ada gambar yang diupload
+    if ($_FILES['gambar']['error'] === 4) {
+        return 'default.png'; // default jika tidak ada file
     }
 
     $namaFile = $_FILES['gambar']['name'];
     $tmpName  = $_FILES['gambar']['tmp_name'];
 
-    move_uploaded_file($tmpName, 'image/' . $namaFile);
-    return $namaFile;
+    // direktori tujuan
+    $targetDir  = 'image/';
+    $targetFile = $targetDir . basename($namaFile);
+
+    // pindahkan file
+    if (move_uploaded_file($tmpName, $targetFile)) {
+        return $namaFile;
+    } else {
+        return 'default.png';
+    }
 }
 
 function tambah($data) {
@@ -37,4 +46,14 @@ function tambah($data) {
 
     return mysqli_affected_rows($conn);
 }
+
+// 
+
+function hapus($id) {
+    global $conn;
+    mysqli_query($conn, "DELETE FROM siswa WHERE id = $id");
+    
+    return mysqli_affected_rows($conn);
+}
+
 ?>
