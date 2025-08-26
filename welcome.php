@@ -17,7 +17,6 @@ $siswa = mysqli_query($conn, "SELECT * FROM siswa");
 if (isset($_POST["submit"])) {
     if (tambah($_POST) > 0) {
         echo "<script>
-            alert('Data berhasil ditambahkan!');
             document.location.href = 'welcome.php?page=laporan';
         </script>";
     } else {
@@ -40,14 +39,14 @@ if (isset($_POST["submit"])) {
    <div class="sidebar">
     <h2>Menu</h2>
     <div class="menu">
-        <a href="welcome.php?page=home">Home</a>
-        <a href="welcome.php?page=nilai">Nilai</a>
-        <a href="welcome.php?page=kehadiran">Kehadiran</a>
-        <a href="welcome.php?page=jadwal">Jadwal</a>
-        <a href="welcome.php?page=pengaturan">Pengaturan</a>
-        <a href="welcome.php?page=laporan">Laporan</a>
+        <a href="welcome.php?page=home">🏠 Home</a>
+        <a href="welcome.php?page=nilai">📊 Nilai</a>
+        <a href="welcome.php?page=kehadiran">📝 Kehadiran</a>
+        <a href="welcome.php?page=jadwal">📅 Jadwal</a>
+        <a href="welcome.php?page=pengaturan">⚙️ Pengaturan</a>
+        <a href="welcome.php?page=laporan">📄 Laporan</a>
     </div>
-    <a href="logout.php" class="logout-btn">Logout</a>
+    <a href="logout.php" class="logout-btn">🚪 Logout</a>
 </div>
 
     <div class="content">
@@ -61,8 +60,36 @@ if (isset($_POST["submit"])) {
                 echo "<p>Data nilai siswa...</p>";
                 break;
             case 'kehadiran':
-                echo "<p>Rekap absensi siswa...</p>";
-                break;
+        ?>
+             <h3>Daftar Kehadiran</h3>
+           <div class="card table-card">
+             <table>
+             <thead>
+                  <tr>
+                     <th>No.</th>
+                     <th>Nama Siswa</th>
+                  </tr>
+             </thead>
+          <tbody>
+            <?php if(empty($siswa)): ?>
+                 <tr>
+                     <td colspan="2" style="text-align:center; padding:20px;">Belum ada data siswa.</td>
+                 </tr>
+               <?php else: ?>
+                  <?php 
+                    $i = 1; 
+                    foreach ($siswa as $row): ?>
+                       <tr>
+                          <td><?= $i++; ?></td>
+                          <td><?= htmlspecialchars($row['nama']); ?></td>
+                       </tr>
+                    <?php endforeach; ?>
+            <?php endif; ?>
+                </tbody>
+             </table>
+            </div>
+            <?php
+           break;      
             case 'jadwal':
                 echo "<p>Jadwal pelajaran...</p>";
                 break;
@@ -91,6 +118,7 @@ if (isset($_POST["submit"])) {
                             <option value="">-- Pilih Jurusan --</option>
                             <option value="Teknik Informatika">Teknik Informatika</option>
                             <option value="Sistem Informatika">Sistem Informatika</option>
+                            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                         </select>
 
                         <label for="gambar">Gambar Profil:</label>

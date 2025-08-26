@@ -242,3 +242,45 @@ body {
 .aksi-btns .view { background: #2ecc71; }
 .aksi-btns .edit { background: #f39c12; }
 .aksi-btns .delete { background: #e74c3c; }
+
+
+/*  Kehadiran  */
+
+/* Tabel Kehadiran */
+.kehadiran-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.kehadiran-table thead {
+  background: #3498db;
+  color: #fff;
+}
+
+.kehadiran-table th,
+.kehadiran-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.kehadiran-table tbody tr:nth-child(even) {
+  background: #f8f9fb;
+}
+
+.kehadiran-table tbody tr:hover {
+  background: #eaf3fc;
+  transition: 0.2s;
+}
+
+.kehadiran-table th:first-child,
+.kehadiran-table td:first-child {
+  text-align: center;
+  width: 60px;
+}
+
