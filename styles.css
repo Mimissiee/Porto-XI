@@ -284,3 +284,101 @@ body {
   width: 60px;
 }
 
+/* update */
+/* Form Ubah Data Siswa - Modern Style */
+.content .update-form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 35px;
+  max-width: 520px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content .update-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.update-form-card h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+.update-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.update-form-card label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 5px;
+}
+
+.update-form-card input[type="text"],
+.update-form-card input[type="file"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.update-form-card input[type="text"]:focus,
+.update-form-card input[type="file"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52,152,219,0.35);
+}
+
+.update-form-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.update-form-card img:hover {
+  transform: scale(1.1);
+  border-color: #3498db;
+  box-shadow: 0 4px 15px rgba(52,152,219,0.3);
+}
+
+.update-form-card button {
+  padding: 14px 0;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.update-form-card button:hover {
+  background: linear-gradient(135deg, #2980b9, #2471a3);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .content .update-form-card {
+    margin: 20px 15px;
+    padding: 25px;
+  }
+
+  .update-form-card img {
+    width: 60px;
+    height: 60px;
+  }
+}

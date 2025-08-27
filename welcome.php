@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
 <html>
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -161,8 +161,8 @@ if (isset($_POST["submit"])) {
                                             <a href="view.php?id=<?= $row['id']; ?>" class="view">
                                                 <i class="fas fa-eye"></i> Lihat
                                             </a>
-                                            <a href="edit.php?id=<?= $row['id']; ?>" class="edit">
-                                                <i class="fas fa-edit"></i> Ubah
+                                            <a href="update.php?id=<?= $row['id']; ?>" class="edit">
+                                                <i class="fas fa-edit"></i> Update
                                             </a>
                                             <a href="hapus.php?id=<?= $row['id']; ?>" class="delete">
                                                 <i class="fas fa-trash"></i> Hapus
